@@ -6,7 +6,6 @@
 #SBATCH --ntasks=1   # number of processor cores (i.e. tasks)
 #SBATCH --nodes=1   # number of nodes
 #SBATCH --cpus-per-task=1	# number of processors per task
-
 #SBATCH -J "rplhps"   # job name
 
 ## /SBATCH -p general # partition (queue)
@@ -21,7 +20,6 @@ conda activate $envarg
 
 python -u -c "import PyHipp as pyh; \
 import time; \
-pyh.RPLHighPass(saveLevel=1); \
 from PyHipp import mountain_batch; \
 mountain_batch.mountain_batch(); \
 from PyHipp import export_mountain_cells; \
