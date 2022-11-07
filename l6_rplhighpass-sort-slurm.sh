@@ -6,6 +6,7 @@
 #SBATCH --ntasks=1   # number of processor cores (i.e. tasks)
 #SBATCH --nodes=1   # number of nodes
 #SBATCH --cpus-per-task=1	# number of processors per task
+<<<<<<<< HEAD:l6_rplhighpass-sort-slurm.sh
 #SBATCH -J "rplHP-sort"   # job name
 
 ## /SBATCH -p general # partition (queue)
@@ -13,6 +14,10 @@
 #SBATCH -e rplhp-sort-slurm.%N.%j.err # STDERR
 
 # LOAD MODULES, INSERT CODE, AND RUN YOUR PROGRAMS HERE
+========
+
+#SBATCH -J "rplhps"   # job name
+>>>>>>>> origin/main:rplhighpass-sort-slurm.sh
 
 /data/miniconda3/bin/conda init
 source ~/.bashrc
@@ -30,4 +35,7 @@ print(time.localtime());"
 
 conda deactivate 
 /data/src/PyHipp/envlist.py $envarg
+<<<<<<<< HEAD:l6_rplhighpass-sort-slurm.sh
 
+========
+>>>>>>>> origin/main:rplhighpass-sort-slurm.sh

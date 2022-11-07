@@ -14,8 +14,13 @@
 
 # LOAD MODULES, INSERT CODE, AND RUN YOUR PROGRAMS HERE
 python -u -c "import PyHipp as pyh; \
+<<<<<<<< HEAD:l6_rse-slurm.sh
 import time; \
 import os; \
+========
+import os; \
+import time; \
+>>>>>>>> origin/main:rse-slurm.sh
 t0 = time.time(); \
 print(time.localtime()); \
 os.chdir('sessioneye'); \
@@ -23,5 +28,9 @@ pyh.RPLSplit(SkipLFP=False, SkipHighPass=False); \
 print(time.localtime()); \
 print(time.time()-t0);"
 
+<<<<<<<< HEAD:l6_rse-slurm.sh
 
 aws sns publish --topic-arn arn:aws:sns:ap-southeast-1:762952520311:awsnotify --message "RPEJobDone"
+========
+aws sns publish --topic-arn arn:aws:sns:ap-southeast-1:018084650241:awsnotify --message "RSEJobDone"
+>>>>>>>> origin/main:rse-slurm.sh
