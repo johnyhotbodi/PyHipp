@@ -19,17 +19,8 @@ import os; \
 import time; \
 t0 = time.time(); \
 print(time.localtime()); \
-<<<<<<<< HEAD:l6_rs1a-slurm.sh
 DPT.objects.processDirs(dirs=None, objtype=pyh.RPLSplit, channel=[*range(1,33)], SkipHPC=False, HPCScriptsDir = '/data/src/PyHipp/', SkipLFP=False, SkipHighPass=False, SkipSort=False); \
 print(time.localtime()); \
 print(time.time()-t0);"
 
 aws sns publish --topic-arn arn:aws:sns:ap-southeast-1:762952520311:awsnotify --message "RPLA1JobDone"
-========
-
-DPT.objects.processDirs(dirs=None, objtype=pyh.RPLSplit, channel=[*range(1,33)], SkipHPC=False, HPCScriptsDir='/data/src/PyHipp/', SkipLFP=False, SkipHighPass=False, SkipSort=False); \
-print(time.localtime()); \
-print(time.time()-t0);"
-
-aws sns publish --topic-arn arn:aws:sns:ap-southeast-1:018084650241:awsnotify --message "RPLS1JobDone"
->>>>>>>> origin/main:rs1a-slurm.sh
